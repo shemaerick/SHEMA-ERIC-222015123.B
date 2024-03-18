@@ -1,0 +1,152 @@
+<html>
+<head>
+	<title>My Book</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<body bgcolor="skyblue">
+	</body>
+    <p>
+    	<center>
+    	<ul style="list-style-type: none;  padding: 0;">
+        <li style="display: inline; background-color:skyblue; margin-right: 10px"><a href="./home.html">HOME</a></li>
+        <li style="display: inline; background-color:skyblue; margin-right: 10px"><a href="./about.html">ABOUT</a></li>
+        <li style="display: inline; background-color:skyblue; margin-right: 10px"><a href="./contact.html">CONTACT</a></li>
+        <li style="display: inline; background-color:skyblue; margin-right: 10px"><a href="./services.html">SERVICES</a></li>
+        <li style="display: inline; background-color:skyblue; margin-right: 10px"><a href="./form.html">FORM</a></li>
+        <li style="display: inline; background-color:skyblue; margin-right: 10px"><a href="./table.html">TABLE</a></li>
+        <li style="display: inline; background-color:skyblue; margin-right: 10px"><a href="./book.html">MYBOOK</a></li>
+    </ul></center>
+
+	</p>
+	<h1>Bloom_hub_connecting </h1
+	<ol><h2><u><li>DATABASE</li></u></h2>
+		<p>Database Name: <b>Bloom_hub_connecting.</b></p>
+		<ul type="square"><h3><u><i><li>Tables</li></i></u></h3>
+
+			<ol type="a"><li><b>Order</b></li>
+
+			<p>The order table serves as a centralized repository for all information related to flower orders. It contains details such as customer names, delivery addresses, preferred bouquet designs, delivery dates, and any special instructions provided by the customer.
+</p></br>
+
+			<li><b>the Customer .</b></li>
+
+			<p> In Bloom Hub, the Customer table plays a vital role in understanding and serving your flower-loving customers. It serves as a central hub for storing and managing customer information, allowing you to personalize their experience and tailor your offerings.</p> </br>
+<li><b>THE FLOWERS.</b></li>
+
+			<p>  a "farmer table" would likely refer to a database or platform that organizes information about flower growers or suppliers. It could include details such as the types of flowers they cultivate, their location, contact information, availability of blooms, and any other relevant data for sourcing flowers.</p> </br>
+
+			<li><b> Payment</b></li>
+
+			<p> The payment table at Bloom Hub Connecting Flower Services is a structured display of financial information related to transactions made on our platform. It includes details such as the cost of individual floral arrangements, any applicable taxes or fees, and the total amount due for each order.
+</p></br>
+
+			<li><b>Employee</b></li>
+
+			<p>The "Employee Table" refers to a structured dataset or record containing information about the employees associated with the company.<BR><BR> This table likely includes details such as employee names, contact information, roles or positions within the organization, and possibly other relevant data such as work schedules or performance metrics.
+
+ </p></br>
+
+			<li><b>Admin Table</b></li></ol>
+
+			<p> Admin table database structure This is table is table that will be only created by admin and will hold other system users apart from admin  will give them email and password that they will use to login and access the project or system, and also t used to register if she/he’s don’t have an account so once you must to create account in order to login and access or use the system.
+            Note: the created Admin will not have same ability and right in the system.
+ </p></li></br>
+
+			              <h3><u><i><li>Attributes and their relationships</li></i></u></h3>
+			              <ol type="Attributes and their relationships">
+			       <b>SQL QUERIES</b></br></br>
+			       
+    <ol type="i"><li>ORDER TABLE </li><br>
+
+   CREATE TABLE `Order` (<br>
+    Order_id INT PRIMARY KEY AUTO_INCREMENT,<br>
+    Customer_id INT,<br>
+    Flower_id INT,<br>
+    Farmer_id INT,<br>
+    Quantity INT,<br>
+    Total_Price DECIMAL(10, 2),<br>
+    Order_Date DATE<br>
+);<br>
+
+
+    <li>CUSTOMER </li><br>
+   CREATE TABLE Customer (<br>
+    Customer_id INT PRIMARY KEY AUTO_INCREMENT,<br>
+    Customer_Name VARCHAR(100) NOT NULL,<br>
+    Contact_Number VARCHAR(20),<br>
+    Email VARCHAR(100),<br>
+    Address VARCHAR(255)<br>
+);
+<br> 
+			       
+    <li>Payment</li><br>
+
+   CREATE TABLE Payment (<br>
+    Payment_id INT PRIMARY KEY AUTO_INCREMENT,<br>
+    Customer_id INT,<br>
+    Order_id INT,<br>
+    Payment_Amount DECIMAL(10, 2),<br>
+    Payment_Date DATE,<br>
+    Payment_Method VARCHAR(50)<br>
+);
+<br>
+<li><b>EMPLOYEE</b></li></ol></br></br>
+
+   CREATE TABLE Employee (<br>
+  Employee_Id INT PRIMARY KEY AUTO_INCREMENT,<br>  
+  Department_Id INT NOT NULL,<br>                  
+  First_Name VARCHAR(50) NOT NULL,<br>         
+  Last_Name VARCHAR(50) NOT NULL,<br>                
+  Email VARCHAR(100) UNIQUE NOT NULL,<br>           
+  Position VARCHAR(50),<br>                         
+  Gender CHAR(1) CHECK (Gender IN ('M', 'F', 'O')),<br> 
+  FOREIGN KEY (Department_Id) REFERENCES Department(Department_Id)<br>
+);<br>
+<br>
+<h1><b>Conclusions</b></h1> 
+<h4><i><li>By implementing a centralized database with a user-friendly web interface, Bloom Hub can significantly improve data management, streamline reporting, and enhance collaboration across the organization. This will not only save time and resources but also ensure access to accurate and up-to-date information for all stakeholders. </li></i></h4>
+<P><b>Reference:  
+1. Six-Step Relational Database Design Second Edition (Fidel A Captain, 2016)  2. www.erbessd-instruments.com </b>  </P>
+
+	</body>
+
+        </ul>
+		<h2><u><li>JAVA</li></u></h2>
+		
+		<ul type="square"><h3><u><i><li>Description</li></i></u></h3><br>
+			<p> In this chapter I will be describing how powerful generalpurpose programming language was used to create the analyzed system. Under this chapter I will undergo full detail of how everything will function together with database that have been describe above and how it cope with full analyzed system.  Tools used to develop this system in java programming:<br><br>
+			 <h4><u><li>Tools used to develop this system in java programming</li></u></h4>
+		
+Eclipse IDE: an integrated development environment used in computer programming. It contains a base workspace and an extensible plug-in system for customizing the environment. It is the second-most-popular IDE for Java development, and, until 2016, was the most popular.  
+JAR stands for Java Archive. It's a file format based on the popular ZIP file format and is used for aggregating many files into one. Although JAR can be used as a general archiving tool, the primary motivation for its development was so that Java applets and their requisite components.  
+</p></br>
+			              <h3><u><i><li>Forms and Images</li></i></u></h3>
+
+        </ul>
+        <P><i>CUSTOMER FORM</i></p>
+        <img src="image/CUSTOMER FORM.jpg" width=600 height=200><br>
+        <P><i>FARMER FORM</i></p>
+        <img src="image/FARMER FORM.jpg" width=600 height=200><br>
+        <P><i>ORDER FORM</i></p>
+        <img src="image/ORDER FORM.jpg" width=600 height=200><br>
+        <P><i>FLOWERS FORM</i></p>
+        <img src="image/FLOWERS FORM.jpg" width=600 height=200><br>
+        <P><i>PAYMENT FORM</i></p>
+        <img src="image/PAYMENT FORM.jpg" width=600 height=200><br>
+        <P><i>SINUP FORM</i></p>
+        <img src="image/SINUP FORM.jpg" width=600 height=200><br>
+        <P><i>LOGIN FORM</i></p>
+        <img src="image/LOGIN FORM.jpg" width=600 height=200><br>
+        <P><i>MENU FORM</i></p>
+        <img src="image/MENU FORM.jpg" width=600 height=200><br>
+        <P><b>References<br> 
+1.https://www.javatpoint.com/operators-in-java<br>
+2.	www.eclipse.org>windowbuilider<br>   
+3.	www.vogella.com>article<br>   
+4.	www.formdev.com>ides>eclipse   
+</b>  </P>
+</ol>
+	<marquee><p><i><h2 style="color: white;">Prepared By:</i></p> SHEMA ERIC </h2></marquee>
+	</body>
+	</html>
